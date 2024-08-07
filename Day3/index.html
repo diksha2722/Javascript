@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //--------LEVEL1----------
+        //1.
+        let firstName='Harry';
+        let lastName='Potter';
+        let country='India';
+        let city='Mumbai';
+        let age= 20;
+        let isMarried='No';
+        let year=2030;
+
+        console.log(typeof firstName);
+        console.log(typeof lastName);
+        console.log(typeof country);
+        console.log(typeof city);
+        console.log(typeof age);
+        console.log(typeof isMarried);
+        console.log(typeof year);
+
+        //2.
+        const str = '10';
+        const num = 10;
+        const typeCheck= typeof str===typeof num;
+        console.log(typeCheck);
+        
+        //3.
+        const pint=parseInt('9.8');
+        const numb=10;
+        const check= pint===numb;
+        console.log(check);
+
+        //4.
+        let a1=true;
+        let a2=4>3;
+        let a3=false;
+        let a4=4<4;
+
+        //5.
+        let b1='python';
+        let b2='jargon';
+        console.log(b1.length!=b2.length);
+
+        //6.
+        let c1='dragon';
+        let c2='python'
+        console.log("Dragon and Python", c1.includes('on') && c2.includes('on'));
+
+        //7.
+        const now=new Date;
+        console.log(now.getFullYear());
+        console.log(now.getMonth());
+        console.log(now.getDate());
+
+
+        //----------LEVEL2----------
+        //1.
+        // let b=prompt('Enter base');
+        // let h=prompt('Enter height');
+        // let area=0.5*b*h;
+        // console.log("area is",area);
+
+        //2.
+        // function calculateEarnings() {
+        //     let hours = prompt("Enter hours:");
+        //     let ratePerHour = prompt("Enter rate per hour:");
+        //     let weeklyEarnings = hours * ratePerHour;
+        //     alert(`Your weekly earning is ${weeklyEarnings}`);
+        // }
+        // calculateEarnings();
+
+        //3.
+        // function checkNameLength() {
+        //     let name = prompt("Enter your name:");
+        //     if (name.length > 7) {
+        //         alert("Your name is long");
+        //     } else {
+        //         alert("Your name is short");
+        //     }
+        // }
+        // checkNameLength();
+
+        //4.
+        // function calculateSecondsLived() {
+        //     let yearsLived = prompt("Enter number of years you live:");
+
+        //     yearsLived = parseFloat(yearsLived);
+        //     const secondsPerYear = 365 * 24 * 60 * 60;
+        //     const totalSecondsLived = yearsLived * secondsPerYear;
+
+        //     alert(`You lived ${totalSecondsLived} seconds.`);
+        // }
+        // calculateSecondsLived()
+
+        //5.
+        const now1 = new Date();
+        const yearr = now1.getFullYear() ;
+        const month = now1.getMonth() + 1 ;
+        const date = now1.getDate() ;
+        const hours = now1.getHours() ;
+        const minutes = now1.getMinutes();
+
+        console.log(`${yearr}-${month}-${date} ${hours}:${minutes}`);
+        console.log(`${date}-${month}-${yearr} ${hours}:${minutes}`);
+        console.log(`${date}/${month}/${yearr} ${hours}:${minutes}`);
+
+
+        //-----------LEVEL3-------------
+        //1.
+        const date1 = new Date();
+
+        const year1 = date1.getFullYear();
+        const month1 = (`0${date1.getMonth() + 1}`).slice(-2);
+        const day = (`0${date1.getDate()}`).slice(-2);
+
+        const hour = (`0${date1.getHours()}`).slice(-2);
+        const minute = (`0${date1.getMinutes()}`).slice(-2);
+
+        const formattedDate = `${year1}-${month1}-${day} ${hour}:${minute}`;
+
+        console.log(formattedDate); 
+
+
+
+
+    </script>
+</body>
+</html>

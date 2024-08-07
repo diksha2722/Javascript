@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //-----------LEVEL1------------
+
+        //1.
+
+        // let age=prompt("Enter age");
+        // let left=18-age;
+        // if(age>18){
+        //     console.log("You are old enough to drive.");
+        // }
+        // else{
+        //     console.log(`You are left with ${left} years to drive.`);
+        // }
+
+        //2.
+
+        // let a=prompt("Enter a's age");
+        // let b=prompt("Enter b's age");
+        // if(a>b){
+        //     console.log("a's older than b");
+        // }
+        // else{
+        //     console.log("b's older than a");
+        // }
+
+        // (a>b)?console.log("a's older than b"): console.log("b's older than a");
+
+        //-----------LEVEL2------------
+
+        // 1.
+
+        // let score = prompt('What are your marks')
+        // switch (score) {
+        //     case (score >= 80 && score <= 100):
+        //             console.log('A');
+        //             break;
+        //         case (score >= 70 && score <= 79):
+        //             console.log('B');
+        //             break;
+        //         case (score >= 60 && score <= 69):
+        //             console.log('C');
+        //             break;
+        //         case (score >= 50 && score <= 59):
+        //             console.log('D');
+        //             break;
+        //         case (score >= 0 && score <= 49):
+        //             console.log('F');
+        //             break;
+        //         default:
+        //             console.log('Invalid score');
+        //             break;
+        // }
+
+        //-------------LEVEL3---------------
+        //1.
+        
+        let month=prompt("Enter month");
+        month = month.charAt(0).toUpperCase() + month.slice(1).toLowerCase();
+        switch (month) {
+            case 'January':
+            case 'March':
+            case 'May':
+            case 'July':
+            case 'August':
+            case 'October':
+            case 'December':
+                console.log('31');
+                break;
+            case 'April':
+            case 'June':
+            case 'September':
+            case 'November':
+                console.log('30');
+                    break;
+            case 'February':
+                console.log('28');
+                break;
+            default:
+                console.log('Invalid');
+        }
+
+    </script>
+</body>
+</html>

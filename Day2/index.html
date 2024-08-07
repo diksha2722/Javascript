@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //--------LEVEL1------------
+        let challenge='30 Days Of JavaScript';
+        console.log(challenge);
+        console.log(challenge.length);
+        console.log(challenge.substr(3,20));
+        console.log(challenge.includes("Script"));
+        console.log(challenge.split(','));
+
+        let companies= 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon';
+        console.log(companies.split(','));
+        console.log(challenge.charAt(15));
+
+        let sentence = 'You cannot end a sentence with because because because is a conjunction';
+
+        console.log("The last occurrence of 'because' is", sentence.lastIndexOf('because'));
+        console.log(challenge.trim(''));
+        console.log(challenge.startsWith('30'));
+        console.log(challenge.match(/a/gi)); //g means global search , i is for case sensitive
+
+        //---------LEVEL2----------
+        //1.
+        console.log("'There is no exercise better for the heart than reaching down and lifting people up.' by John Holmes teaches us to help one another.");
+        //2.
+        console.log("Love is not patronizing and charity isn't about pity, it is about love. Charity and love are the same -- with charity you give love, so don't just give money but reach out your hand instead");
+
+        //3.
+        let str='10';
+        console.log(str===10);
+        let num=Number(str);
+        console.log(num===10);
+
+        //4.
+        let num1=parseFloat('9.8');
+        if (num1 !== 10) {
+            num1=10;
+        }
+        console.log(num1); 
+
+        //5.
+        w1='python';
+        w2='jargon';
+        console.log(w1.includes('on'));
+        console.log(w2.includes('on'));
+
+        //6.
+        let randnum= Math.floor(Math.random()*101);
+        console.log(randnum);
+
+        //7.
+        const min = 50;
+        const max = 100;
+        const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+        console.log(randomNumber);
+
+
+        //8.
+        const ch = "JavaScript";
+        const mini = 0;
+        const maxi = str.length - 1;
+        const randindex = Math.floor(Math.random() * (max - min + 1)) + min;
+        const randchar = str[randindex];
+        console.log(`Random index: ${randindex}, Character: ${randchar}`);
+
+        //9.
+        console.log("1 1 1 1 1\n2 1 2 4 8\n3 1 3 9 27\n4 1 4 16 64\n5 1 5 25 125");
+
+        //10.
+        const given = 'You cannot end a sentence with because because because is a conjunction';
+        const start = given.indexOf('because because because');
+        const length = 'because because because'.length;
+        const slicedPhrase = given.substr(start, length);
+
+        console.log(slicedPhrase); 
+
+        //----------LEVEL3-------------
+
+        //1.
+        let lv='Love is the best thing in this world. Some found their love and some are still looking for their love';
+        let count=0;
+        let words = lv.split(' ');
+        for(let i=0;i<words.length;i++){
+            if(words[i].toLowerCase() === 'love'){
+                count++;
+            }
+        }
+        console.log(count);
+
+
+        //2.
+        let st = 'You cannot end a sentence with because because because is a conjunction';
+        let count1 = 0;
+
+        let matchstr = st.match(/because/g);
+        if (matchstr) {
+            count1 = matchstr.length;
+        }
+
+        console.log(count1);
+
+        //3.
+        const text = 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.';
+
+        const numbers = text.match(/\d+/g).map(Number);
+
+
+        const monthlySalary = numbers[0];  
+        const annualBonus = numbers[1];    
+        const monthlyCourses = numbers[2]; 
+
+        const annualSalary = monthlySalary * 12;
+        const annualCourses = monthlyCourses * 12;
+        const totalAnnualIncome = annualSalary + annualBonus + annualCourses;
+        console.log(`Total annual income: ${totalAnnualIncome} euro`);
+
+
+    </script>
+</body>
+</html>
