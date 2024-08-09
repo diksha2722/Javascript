@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //2.
+        let text ='I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.'
+        let pun=text.replace(/[.,]/g,'');
+        let words=pun.split(/\s+/);
+        console.log(words)
+        console.log("Length of words",words.length)
+
+        //3.
+        const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey'];
+        shoppingCart.unshift('Meat');
+        console.log(shoppingCart);
+
+        shoppingCart.push('Sugar');
+        console.info(shoppingCart);
+
+        let tea=shoppingCart.indexOf('Tea');
+        shoppingCart[tea]='Grean Tea';
+        console.log(shoppingCart);
+
+        //4.
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.
+        const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+        ages.sort();
+        console.log("Min",ages[0]);
+        console.log("Max",ages[ages.length-1]);
+
+        const mid1=ages[ages.length/2-1];
+        const mid2=ages[ages.length/2];
+        let median=(mid1+mid2)/2;
+        console.log("Median",median);
+
+        let cnt=0;
+        for(let i=0;i<ages.length;i++){
+            cnt+=ages[i];
+        }
+        let avg=cnt/ages.length;
+        console.log("Average",avg);
+
+        //2.
+        console.log(mid1,mid2)
+    </script>
+</body>
+</html>

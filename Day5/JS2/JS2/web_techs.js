@@ -1,0 +1,1 @@
+export const webTechs =['HTML','CSS','React','Node.js'];
