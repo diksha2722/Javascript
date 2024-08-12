@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.
+        function generateRandomID(length) {
+            let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let id = '';
+            for (let i = 0; i < length; i++) {
+                let randomIndex = Math.floor(Math.random() * characters.length);
+                id += characters[randomIndex];
+            }
+            return id;
+        }
+        let length = 12;
+        let randomID = generateRandomID(length);
+        console.log(randomID);
+
+        //2.
+        let r = Math.floor(Math.random() * 256);
+        let g = Math.floor(Math.random() * 256);
+        let b = Math.floor(Math.random() * 256);
+        console.log(`rgb(${r}, ${g}, ${b})`);
+
+        //3.
+        const countries = [
+            'Albania',
+            'Bolivia',
+            'Canada',
+            'Denmark',
+            'Ethiopia',
+            'Finland',
+            'Germany',
+            'Hungary',
+            'Ireland',
+            'Japan',
+            'Kenya'
+        ]
+        let newarr=Array();
+        for(let i=0;i<countries.length;i++){
+            let el=countries[i].toUpperCase();
+            newarr.push(el);
+        }
+        console.log(newarr);
+
+        //4.
+        const lengths = countries.map(country => country.length);
+        console.log(lengths);
+
+        //5.
+        const countryCodes = ['ALB', 'BOL', 'CAN', 'DEN', 'ETH', 'FIN', 'GER', 'HUN', 'IRE', 'ICE', 'JAP', 'KEN'];
+
+        const newcountry = [];
+        for (let i= 0; i< countries.length; i++) {
+            const info = [
+                countries[i],         
+                countryCodes[i],       
+                countries[i].length    
+            ];
+            newcountry.push(info);
+        }
+        console.log(newcountry);
+
+        //6.
+        const arr1=[]
+        for(let i=0;i<countries.length;i++){
+            if(countries[i].includes('land')){
+                arr1.push(countries[i])
+            }
+        }
+        if (arr1.length > 0) {
+            console.log(arr1);
+        } 
+        else {
+            console.log('All these countries are without land');
+        }
+
+        //7.
+        let maxlen='';
+        let max=0;
+        for(let i=0;i<countries.length;i++){
+            const len=countries[i].length;
+            if(len>max){
+                max=len;
+                maxlen=countries[i];
+            }
+        }
+        console.log(maxlen);
+
+        //8.
+        const arr2=[];
+        for(let i=0;i<countries.length;i++){
+            if(countries[i].length==5){
+                arr2.push(countries[i]);
+            }
+        }
+        console.log(arr2);
+
+        //9.
+        const webTechs = [
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'React',
+            'Redux',
+            'Node',
+            'MongoDB'
+        ]
+        let maxl=0;
+        let maxword='';
+        for(let i=0;i<webTechs.length;i++){
+            if(webTechs[i].length>maxl){
+                maxl=webTechs[i].length;
+                maxword=webTechs[i];
+            }
+        }
+        console.log(maxword);
+
+        //10.
+        let web=[];
+        for(let i=0;i<webTechs.length;i++){
+            web.push([webTechs[i], webTechs[i].length])
+        }
+        console.log(web);
+
+        //11.
+        const tech = ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"];
+
+        for (let i= 0; i< tech.length; i++) {
+            console.log(tech[i]);
+        }
+
+        for(i of tech){
+            console.log(i);
+        }
+
+    </script>
+</body>
+</html>

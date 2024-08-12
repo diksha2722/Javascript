@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.
+        const countries = [
+        'Albania',
+        'Bolivia',
+        'Canada',
+        'Denmark',
+        'Ethiopia',
+        'Finland',
+        'Germany',
+        'Hungary',
+        'Ireland',
+        'Japan',
+        'Kenya'
+        ];
+        let arr=[];
+        for(let i=0;i<countries.length;i++){
+            arr.push(countries[i]);
+        }
+        console.log(arr);
+
+        //2.
+        const sortedCountries=arr.sort();
+        console.log(sortedCountries);
+
+        //3.
+        const mernStack = ['MongoDB', 'Express', 'React', 'Node'];
+        mernStack.sort();
+        console.log(mernStack);
+
+        //4.
+        let newarr=[];
+        for(let i=0;i<countries.length;i++){
+            if(countries[i].includes('land')){
+                newarr.push(countries[i]);
+            }
+        }
+        console.log(newarr);
+
+        //5.
+        let arr1=[];
+        for(let i=0;i<countries.length;i++){
+            if(countries[i].length==4){
+                arr1.push(countries[i]);
+            }
+        }
+        console.log(arr1);
+
+        //6.
+        let arr2=[];
+        for(let i=0;i<countries.length;i++){
+            if(countries[i].length>=2){
+                arr2.push(countries[i]);
+            }
+        }
+        console.log(arr2);
+
+        //7.
+        const reversed = countries.reverse();
+        const capital =[];
+
+        for (let i= 0; i< reversed.length; i++) {
+            capital.push(reversed[i].toUpperCase());
+        }
+        console.log(capital);
+
+        
+    </script>
+</body>
+</html>

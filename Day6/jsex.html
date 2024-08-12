@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const countries = [
+            'Albania',
+            'Bolivia',
+            'Canada',
+            'Denmark',
+            'Ethiopia',
+            'Finland',
+            'Germany',
+            'Hungary',
+            'Ireland',
+            'Japan',
+            'Kenya'
+        ]
+        //1.
+
+        // for(let i=0;i<10;i++){
+        //     console.log(countries[i]);
+        // }
+
+        // let i=0;
+        // while(i<=10){
+        //     console.log(countries[i]);
+        //     i++;
+        // }
+
+        // let i=0;
+        // do{
+        //     console.log(countries[i]);
+        //     i++;
+        // }
+        // while(i<=10);
+
+        //2.
+
+        // for(let j=10;j>=0;j--){
+        //     console.log(countries[j]);
+        // }
+
+        // let i=10;
+        // while(i>0){
+        //     console.log(countries[i]);
+        //     i--;
+        // }
+
+        let i=10;
+        do{
+           console.log(countries[i]);
+            i--;
+        }
+        while(i>0);
+
+        //3.
+        for (let i = 1; i <= 7; i++) {
+            console.log('#'.repeat(i));
+        }
+
+        //4.
+        for(let i=0;i<11;i++){
+            console.log(i , "*" , i, "=", i*i);
+        
+        }
+
+        //5.
+        for(let i=0;i<11;i++){
+            console.log(i , "" , i*i, "" ,i*i*i);
+        }
+
+        //6.
+        for(let i=0;i<=100;i++){
+            if(i%2==0){
+                console.log(i);
+            }
+        }
+
+        //7.
+        for (let i = 2; i <= 100; i++) {
+        let prime = true;
+        for (let j = 2; j <= Math.sqrt(i); j++) {
+            if (i % j === 0) {
+            prime = false;
+            break;
+            }
+        }
+        if (prime) {
+            console.log(i);
+        }
+        }
+
+        //8.
+        let sum=0;
+        for(let i=0;i<=100;i++){
+            sum+=i;
+        }
+        console.log("The sum of all numbers from 0 to 100 is ",sum)
+
+
+        //9.
+        let sumE= 0;
+        let sumO= 0;
+        for (let i= 0; i<= 100; i++) {
+            if (i%2 === 0) {
+                sumE+= i;
+            } else {
+                sumO+= i;
+            }
+        }
+        let result= [sumE, sumO];
+        console.log(result);
+
+        //10.
+        let randno;
+        for(let i=0;i<5;i++){
+            randno=Math.floor(Math.random()*100);
+            console.log(randno);
+        }
+        
+
+    </script>
+</body>
+</html>
