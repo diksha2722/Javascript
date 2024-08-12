@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //-----------LEVEL1-------------
+
+        //1.
+        function fullname(first,second){
+            let fullname=first+second;
+            return fullname;
+        }
+        console.log(fullname('harry ','potter'));
+
+        //2.
+        function addNumbers(a1,a2){
+            let sum=a1+a2;
+            return sum;
+        }
+        console.log(addNumbers(2,3));
+
+        //3.
+        function areaOfRectangle(l,b){
+            let area=l*b;
+            return area;
+        }
+        console.log(areaOfRectangle(2,3));
+
+        //4.
+        function areaOfCircle(radius){
+            let area1=3.14*radius*radius;
+            return area1;
+        }
+        console.log(areaOfCircle(3));
+
+        //5.
+        function density(mass,vol){
+            let density=mass/vol;
+            return density;
+        }
+        console.log(density(9,3));
+
+        //6.
+        function speedofobj(dis,time){
+            let speed=dis/time;
+            return speed;
+        }
+        console.log(speedofobj(10,2));
+
+        //7.
+        function temperature(c){
+            let f=(c*(9/5))+32;
+            return f;
+        }
+        console.log(temperature(10));
+
+        //8.
+        function bmiofperson(w,h){
+            let bmi=w/(h*h);
+            console.log(bmi);
+            if(bmi<18.5){
+                console.log("Underweight");
+            }
+            if(bmi>=18.5 && bmi<=24.9){
+                console.log("Normal weight")
+            }
+            if(bmi>=30){
+                console.log("Obese");
+            }
+        }
+        bmiofperson(70,6);
+        
+
+        //9.
+        function checkSeason(season){
+            if(season=='Jan' || season=='Feb' || season=='March' || season=='Nov' || season=='Dec'){
+                console.log('Winter');
+            }
+            if(season=='April' || season=='May'){
+                console.log('Spring');
+            }
+        }
+        checkSeason('Jan');
+
+        //10.
+        const findMax=(n1,n2,n3)=>{
+            let max=0;
+            if(n1>max){
+                max=n1;
+            }
+            if(n2>max){
+                max=n2;
+            }
+            if(n3>max){
+                max=n3;
+            }
+            console.log(max);
+            
+        }
+        findMax(3,4,5);
+    </script>
+</body>
+</html>

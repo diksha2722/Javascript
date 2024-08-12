@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //------------LEVEL2---------------
+        //1.
+        // function solveLinEquation(a,b,c,x,y) {
+        // const result = a*x+b*y+c;
+        // return result;
+        // }
+        // const a=2;
+        // const b=3;
+        // const c=-6;
+        // const x=1;
+        // const y=2;
+
+        // const value = solveLinEquation(a,b,c,x,y);
+        // console.log(`The value of the linear equation is: ${value}`);
+
+        //2.
+        function solveQuadEquation(a,b,c,x) {
+        const result = a*(x**2)+b*x+c;
+        return result;
+        }
+        const a=2;
+        const b=3;
+        const c=-6;
+        const x=1;
+        const value = solveQuadEquation(a,b,c,x);
+        console.log(`The value of the linear equation is: ${value}`);
+
+        //3.
+        function printArr(arr){
+            for(let i=0;i<arr.length;i++){
+                console.log(arr[i]);
+            }
+        }
+        arr=[2,3,4,5];
+        printArr(arr);
+
+        //4.
+        function swapValues(m,n){
+            let temp=m;
+            m=n;
+            n=temp;
+            console.log(`M is ${m} N is ${n}`)
+        }
+        swapValues(4,5);
+
+        //5.
+        function reverseArr(arr1){
+            let reverse=[];
+            for(let i=arr1.length-1;i>=0;i--){
+                reverse.push(arr1[i])
+            }
+            return reverse;
+        }
+        console.log(reverseArr([1, 2, 3, 4, 5]));
+
+        //6.
+        let arr2=[1,2,3,4,5];
+        function addItem(item){
+            arr2.push(item);
+            return arr2;
+        }
+        console.log(addItem(6));
+
+        //7.
+        function removeItem(arr, index) {
+        const newArray = [];
+        for (let i= 0; i<arr.length; i++) {
+            if (i!== index) {
+                newArray.push(arr[i]);
+            }
+        }
+        return newArray;
+    }
+        console.log(removeItem([1, 2, 3, 4, 5], 2)); 
+
+        //8.
+        function sumOfNum(num){
+            let sum=0;
+            for(let i=0;i<num;i++){
+                sum+=i;
+            }
+            return sum;
+        }
+        console.log("Sum of numbers",sumOfNum(5));
+
+        //9.
+        function evensAndOdds(number) {
+        let evens= 0;
+        let odds= 0;
+
+        for (let i= 1; i<= number; i++) {
+            if (i%2=== 0) {
+                evens++;
+            } else {
+                odds++;
+            }
+        }
+        console.log(`The number of odds are ${odds}.`);
+        console.log(`The number of evens are ${evens}.`);
+        }
+        evensAndOdds(100);
+
+        //10.
+        function sumOfArgs(...args) {
+        let sum= 0;
+        for (let i=0; i<args.length; i++) {
+            sum += args[i];
+        }
+        return sum;
+        }
+        console.log(sumOfArgs(1, 2, 3, 4));
+
+        //11.
+        function randomUserIp() {
+        const get = () => Math.floor(Math.random() * 256);
+        const ip = `${get()}.${get()}.${get()}.${get()}`;
+        return ip;
+        }
+        console.log(randomUserIp());
+
+        //12.
+        function userIdGenerator() {
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        let userId = '';
+        for (let i=0; i<7; i++) {
+            const randomIndex = Math.floor(Math.random() * characters.length);
+            userId += characters[randomIndex];
+        }
+        return userId;
+        }
+        console.log(userIdGenerator()); 
+
+    
+    </script>
+</body>
+</html>

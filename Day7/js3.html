@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //------------LEVEL3--------------
+        //1.
+        function userIdGenerator() {
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        let userId = '';
+        for (let i=0; i<7; i++) {
+            const randomIndex = Math.floor(Math.random() * characters.length);
+            userId += characters[randomIndex];
+        }
+        return userId;
+        }
+        console.log(userIdGenerator()); 
+
+        // function userIdGeneratedByUser(){
+        //     let ch=prompt('Enter number of characters');
+        //     let ids=prompt('Enter the number of ids');
+        //     let user='';
+        //     for (let i=0; i<ids; i++) {
+        //         user+=userIdGenerator(ch)+'\n';
+        //     }
+        //   return user;
+        // }
+        // console.log(userIdGeneratedByUser());
+
+        //2.
+        function rgbColorGenerator(){
+            let r = Math.floor(Math.random() * 256);
+            let g = Math.floor(Math.random() * 256);
+            let b = Math.floor(Math.random() * 256);
+            console.log(`rgb(${r}, ${g}, ${b})`);
+        }
+        rgbColorGenerator();
+
+        //3.
+        function factorial(num){
+            let fact=1;
+            for(let i=0;i<num;i++){
+                fact=fact*(num-i);
+            }
+            console.log("Factorial is", fact);
+        }
+        factorial(4);
+
+        //4.
+        function isEmpty(inp){
+            let para=inp.length;
+            if(para==0){
+                console.log('It is empty')
+            }
+            else{
+                console.log("It is not empty")
+            }
+        }
+        isEmpty('');
+
+        //5.
+        function sumOfArgs(...args) {
+        let sum= 0;
+        for (let i=0; i<args.length; i++) {
+            sum += args[i];
+        }
+        return sum;
+        }
+        console.log(sumOfArgs(1, 2, 3, 4));
+
+        //6.
+        function average(arr3){
+            let len=arr3.length;
+            let sum=0;
+            let avg=0;
+            for(let i=0;i<len;i++){
+                sum+=arr3[i];
+            }
+            avg=sum/len;
+            console.log("Average is",avg);
+        }
+        average([1,2,3]);
+
+        //7.
+        function modifyArray(arr4){
+            if (arr4.length< 5) {
+                return 'item not found';
+            }
+            arr4[4]=arr4[4].toUpperCase();
+            return arr4;
+        }
+        console.log(modifyArray(['Avocado', 'Tomato', 'Potato','Mango', 'Lemon','Carrot']));
+
+        //8.
+        function isPrime(num) {
+    
+            if (num <= 1) {
+                return false;
+            }
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    return false; 
+                }
+            }
+            return true; 
+        }
+            console.log(isPrime(2));  
+
+        //9.
+        function areAllItemsSameType(array) {
+            if (array.length === 0) {
+                return true;
+            }
+            const type = typeof array[0];
+            for (let i=1; i<array.length; i++) {
+                if (typeof array[i] !== type) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        console.log(areAllItemsSameType([1, 2, 3, 4]));                  
+
+        //10.
+        function reverseCountries(countries) {
+        const countriesCopy = countries.slice();
+        const reversedCountries = countriesCopy.reverse();
+        
+        return reversedCountries;
+        }
+        const countries = ['USA', 'Canada', 'Mexico', 'Brazil', 'Argentina'];
+        console.log(reverseCountries(countries));  
+
+    </script>
+</body>
+</html>
