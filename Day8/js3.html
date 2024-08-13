@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //---------------LEVEL3-------------------
+        //1.
+        const personAccount = {
+            firstName: 'Harry',
+            lastName: 'Potter',
+            incomes: [], 
+            expenses: [], 
+            totalIncome() {},
+            totalExpense() {},
+            accountInfo() {},
+            addIncome() {},
+            addExpense() {},
+            accountBalance() {}
+        };
+
+        //2.
+        const users = [
+            {
+                _id: 'ab12ex',
+                username: 'Alex',
+                email: 'alex@alex.com',
+                password: '123123',
+                createdAt:'08/01/2020 9:00 AM',
+                isLoggedIn: false
+            },
+            {
+                _id: 'fg12cy',
+                username: 'Asab',
+                email: 'asab@asab.com',
+                password: '123456',
+                createdAt:'08/01/2020 9:30 AM',
+                isLoggedIn: true
+            },
+            {
+                _id: 'zwf8md',
+                username: 'Brook',
+                email: 'brook@brook.com',
+                password: '123111',
+                createdAt:'08/01/2020 9:45 AM',
+                isLoggedIn: true
+            },
+            {
+                _id: 'eefamr',
+                username: 'Martha',
+                email: 'martha@martha.com',
+                password: '123222',
+                createdAt:'08/01/2020 9:50 AM',
+                isLoggedIn: false
+            },
+            {
+                _id: 'ghderc',
+                username: 'Thomas',
+                email: 'thomas@thomas.com',
+                password: '123333',
+                createdAt:'08/01/2020 10:00 AM',
+                isLoggedIn: false
+            }
+            ];
+
+            const products = [
+            {
+                _id: 'eedfcf',
+                name: 'mobile phone',
+                description: 'Huawei Honor',
+                price: 200,
+                ratings: [
+                { userId: 'fg12cy', rate: 5 },
+                { userId: 'zwf8md', rate: 4.5 }
+                ],
+                likes: []
+            },
+            {
+                _id: 'aegfal',
+                name: 'Laptop',
+                description: 'MacPro: System Darwin',
+                price: 2500,
+                ratings: [],
+                likes: ['fg12cy']
+            },
+            {
+                _id: 'hedfcg',
+                name: 'TV',
+                description: 'Smart TV:Procaster',
+                price: 400,
+                ratings: [{ userId: 'fg12cy', rate: 5 }],
+                likes: ['fg12cy']
+            }
+        ]
+
+        function signUp(newUser) {
+        for (let i=0; i<users.length; i++) {
+            if (users[i].email === newUser.email || users[i].username === newUser.username) {
+                console.log('User already has an account.');
+                return;
+            }
+        }
+        users.push(newUser);
+        console.log('User successfully signed up:', newUser);
+        }
+        const newUser = {
+            username: 'Jerry',
+            email: 'xyz@xy.com',
+            password: 'password123'
+        };
+
+        //3.
+        function likeProduct(productId, userId) {
+            // Find the product by _id
+            const product = products.find(p => p._id === productId);
+
+            if (!product) {
+                console.log('Product not found.');
+                return;
+            }
+
+            // Check if the user already likes the product
+            const likeIndex = product.likes.indexOf(userId);
+
+            if (likeIndex === -1) {
+                // User has not liked the product yet, so add the like
+                product.likes.push(userId);
+                console.log('Product liked by user:', userId);
+            } else {
+                // User has already liked the product, so remove the like
+                product.likes.splice(likeIndex, 1);
+                console.log('Like removed for user:', userId);
+            }
+        }
+
+        signUp(newUser);
+    </script>
+</body>
+</html>

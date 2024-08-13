@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const users = {
+            Alex: {
+                email: 'alex@alex.com',
+                skills: ['HTML', 'CSS', 'JavaScript'],
+                age: 20,
+                isLoggedIn: false,
+                points: 30
+            },
+            Asab: {
+                email: 'asab@asab.com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'Redux', 'MongoDB', 'Express', 'React', 'Node'],
+                age: 25,
+                isLoggedIn: false,
+                points: 50
+            },
+            Brook: {
+                email: 'daniel@daniel.com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux'],
+                age: 30,
+                isLoggedIn: true,
+                points: 50
+            },
+            Daniel: {
+                email: 'daniel@alex.com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'Python'],
+                age: 20,
+                isLoggedIn: false,
+                points: 40
+            },
+            John: {
+                email: 'john@john.com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'Node.js'],
+                age: 20,
+                isLoggedIn: true,
+                points: 50
+            },
+            Thomas: {
+                email: 'thomas@thomas.com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'React'],
+                age: 20,
+                isLoggedIn: false,
+                points: 40
+            },
+            Paul: {
+                email: 'paul@paul.com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'MongoDB', 'Express', 'React', 'Node'],
+                age: 20,
+                isLoggedIn: false,
+                points: 40
+            }
+        };
+
+        //1.
+        let maxuser='';
+        let maxskills=0;
+
+        for(const i in users){
+            if(users[i].skills.length>maxskills){
+                maxskills=users[i].skills.length;
+                maxuser=i;
+            }
+        }
+        console.log(`${maxuser} has the most skills with ${maxskills} skills.`);
+
+        //2.
+        let cnt=0;
+        for(let i in users){
+            if(users[i].isLoggedIn==true){
+                cnt++;
+            }
+        }
+        console.log(`Logged in users are ${cnt}`)
+
+
+        //3.
+        const mern = ['MongoDB', 'Express', 'React', 'Node'];
+
+        const developers = [];
+        for (const user in users) {
+        const skills = users[user].skills;
+        let isMernDeveloper = true;
+        
+        for (let i = 0; i < mern.length; i++) {
+            if (!skills.includes(mern[i])) {
+            isMernDeveloper = false;
+            break;
+            }
+        }
+            if (isMernDeveloper) {
+                developers.push(user);
+            }
+        }
+        console.log('MERN Stack Developers:', developers);
+
+        //4.
+        const newUser = {
+            Diksha: {
+                email: 'diksha@diksha.com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js'],
+                age: 21,
+                isLoggedIn: true,
+                points: 60
+            }
+        };
+        const updatedUsers = { ...users, ...newUser };
+
+        console.log(updatedUsers);
+
+        //5.
+        const userKeys = Object.keys(users);
+        console.log(userKeys);
+
+        //6.
+        const userValues=Object.values(users);
+        console.log(userValues);
+    </script>
+</body>
+</html>
