@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const countries = ['Finland', 'Sweden', 'Denmark', 'Norway', 'IceLand']
+        //------------LEVEL2--------------
+        //1.
+        const products = [
+            { product: 'banana', price: 3 },
+            { product: 'mango', price: 6 },
+            { product: 'potato', price: ' ' },
+            { product: 'avocado', price: 8 },
+            { product: 'coffee', price: 10 },
+            { product: 'tea', price: '' }
+        ];
+        const totalPrice = products
+        .filter(item => typeof item.price === 'number')  
+        .map(item => item.price)                         
+        .reduce((accumulator, currentValue) => accumulator + currentValue, 0); 
+        console.log(totalPrice);
+
+        //2.
+        const total = products.reduce((accumulator, item) => {
+        const price = typeof item.price === 'number'? item.price : 0;
+        return accumulator + price;
+        }, 0);
+        console.log(total);
+
+        //3.
+        function categorizeCountries(pattern) {
+            return countries.filter(country => country.toLowerCase().includes(pattern.toLowerCase()));
+            }
+        const pattern = 'land'; 
+        const result = categorizeCountries(pattern);
+
+        console.log(result);
+
+        //4.
+        function getFirstTenCountries() {
+            return countries
+                .filter((country, index) => index < 10) 
+            }
+            console.log(getFirstTenCountries());
+
+        //5.
+        function getLastTenCountries() {
+            return countries.slice(-10);
+        }
+            console.log(getLastTenCountries());
+    </script>
+</body>
+</html>

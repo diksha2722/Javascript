@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //---------------LEVEL1-----------------
+        //1.
+        // forEach - iterates over each element 
+        // map - creates a new array after applying a specific condition on each each element
+        // filter - creates a new array with elements that pass a specific condition
+        // reduce - reduces an array to a single value
+
+        //2.
+        function callback(n){};
+
+        const countries = ['Finland', 'Sweden', 'Denmark', 'Norway', 'IceLand']
+        const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
+        const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        const products = [
+        { product: 'banana', price: 3 },
+        { product: 'mango', price: 6 },
+        { product: 'potato', price: ' ' },
+        { product: 'avocado', price: 8 },
+        { product: 'coffee', price: 10 },
+        { product: 'tea', price: '' },
+        ]
+
+        //3.
+        countries.forEach(num=>console.log(num));
+
+        //4.
+        names.forEach(n=>console.log(n));
+
+        //5.
+        numbers.forEach(n=>console.log(n));
+
+        //6.
+        const newArr=countries.map((n)=>n.toUpperCase());
+        console.log(newArr);
+
+        //7.
+        const arr1=countries.map((m)=>m.length);
+        console.log(arr1);
+
+        //8.
+        const arr2=numbers.map((n)=>n*n);
+        console.log(arr2);
+
+        //9.
+        const prices = products.map(function(item) {
+            return item.price;
+        });
+        console.log(prices);
+
+        //10.
+        const arr3=countries.filter((i)=>i.includes('land'));
+        console.log(arr3);
+
+        //11.
+        const arr4=countries.filter((i)=>i.length>=6)
+        console.log(arr4);
+
+        //12.
+        const filtered = countries.filter(function(country) {
+            return !country.startsWith('E');
+        });
+        console.log(filtered);
+
+        //13.
+        function getStringLists(arr){
+            return arr.filter(item=> typeof item ==='string');
+        }
+
+        //14.
+        const sum = numbers.reduce((acc, curr) => acc + curr, 0);
+        console.log(sum);
+
+        //15.
+        const sentence = countries.reduce((accumulator, country, index) => {
+        if (index === countries.length - 1) {
+            return `${accumulator} and ${country} are north European countries.`;
+        } else {
+            return `${accumulator}, ${country}`;
+        }
+        });
+        console.log(sentence);
+
+        //16.
+        // some - checks if some elements in the array passes a condition , gives true or false
+        // every - tests if all elelemts pass the condition , gives true or false
+
+        //17.
+        const name = names.some(i =>i.length>7);
+        console.log(name);
+
+        //18.
+        const land=names.every((i)=>i.includes('land'));
+        console.log(land);
+
+        //19.
+        
+        // find - returns the first element that satisfies the given condition 
+        // findIndex - returns index of first element that satisfies the given condition 
+    </script>
+</body>
+</html>
